@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gudeg Jogja</string>
+    <string name="pesan_gudeg">Pesan Gudeg</string>
+    <string name="gudeg_kendil">Gudeg Kendil \n (5 porsi)</string>
+    <string name="gudeg_kaleng">Gudeg Kaleng \n (2 porsi)</string>
+    <string name="gudeg_besek">Gudeg Besek \n (1 porsi)</string>
+    <string name="pilih_rasa">Pilih Rasa</string>
+    <string name="tahu_tempe">Tahu/Tempe</string>
+    <string name="telur">Telur</string>
+    <string name="krecek">Krecek</string>
+    <string name="rempelo_ati">Rempelo Ati</string>
+    <string name="ayam">Ayam</string>
+    <string name="special_flavor">Istimewa</string>
+    <string name="cancel">Batalkan</string>
+    <string name="next">Berikutnya</string>
+    <string name="choose_pickup_date">Pilih tanggal Ambil</string>
+    <string name="order_summary">Pesanan</string>
+    <string name="send">Kirim Pesanan</string>
+    <string name="quantity">Porsi</string>
+    <string name="flavor">Rasa</string>
+    <string name="pickup_date">Tanggal ambil</string>
+    <string name="subtotal_price">Subtotal %s</string>
+    <string name="total_price">Total %s</string>
+    <string name="new_gudeg_order">Pesan gudeg lagi?</string>
+    <string name="order_details">Porsi: %1$s gudeg \n Rasa: %2$s \nTanggal ambil: %3$s \n
+        Total: %4$s \n\n Maturnuwun!</string>
+</resources>

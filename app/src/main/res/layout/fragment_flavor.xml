@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FlavorFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="id.piusanggoro.gudeg.model.OrderViewModel" />
+
+        <variable
+            name="flavorFragment"
+            type="id.piusanggoro.gudeg.FlavorFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/side_margin">
+
+            <RadioGroup
+                android:id="@+id/flavor_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/vanilla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@{viewModel.flavor.equals(@string/tahu_tempe)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/tahu_tempe)}"
+                    android:text="@string/tahu_tempe" />
+
+                <RadioButton
+                    android:id="@+id/chocolate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@{viewModel.flavor.equals(@string/telur)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/telur)}"
+                    android:text="@string/telur" />
+
+                <RadioButton
+                    android:id="@+id/red_velvet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@{viewModel.flavor.equals(@string/krecek)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/krecek)}"
+                    android:text="@string/krecek" />
+
+                <RadioButton
+                    android:id="@+id/salted_caramel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@{viewModel.flavor.equals(@string/rempelo_ati)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/rempelo_ati)}"
+                    android:text="@string/rempelo_ati" />
+
+                <RadioButton
+                    android:id="@+id/coffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@{viewModel.flavor.equals(@string/ayam)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/ayam)}"
+                    android:text="@string/ayam" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.Gudeg.Divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flavor_options" />
+
+            <TextView
+                android:id="@+id/subtotal"
+                style="@style/Widget.Gudeg.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                android:text="@{@string/subtotal_price(viewModel.price)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                tools:text="Subtotal Rp 10,000.00" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                android:onClick="@{() -> flavorFragment.goToNextScreen()}"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
